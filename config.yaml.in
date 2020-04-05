@@ -1,0 +1,2 @@
+app_name: "bootstrap-go-httpserver"
+port: "%PORT%"

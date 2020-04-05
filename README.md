@@ -1,5 +1,7 @@
 ![Gopher](https://golang.org/lib/godoc/images/footer-gopher.jpg)
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/irisgve/bootstrap-go-httpserver)](https://goreportcard.com/report/github.com/irisgve/bootstrap-go-httpserver)
+
 # bootstrap-go-httpserver
 A minimumal bootstrap HTTP server written in [Go](https://golang.org)
 

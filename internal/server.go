@@ -12,6 +12,7 @@ import (
 	"go.uber.org/zap/zapcore"
 )
 
+// Server contains the full structure for the new HTTP server
 type Server struct {
 	Logger *zap.Logger
 	Config *Config
@@ -19,6 +20,7 @@ type Server struct {
 	*http.Server
 }
 
+// NewServer creates new server with logger
 func NewServer(cfg *Config) (*Server, error) {
 	logger, err := zap.NewProduction(zap.AddStacktrace(zapcore.FatalLevel))
 	if err != nil {
@@ -43,6 +45,7 @@ func NewServer(cfg *Config) (*Server, error) {
 	return &Server{logger, cfg, &srv}, nil
 }
 
+// Start kicks off the server
 func (s *Server) Start() {
 	defer s.Logger.Sync()
 
@@ -68,7 +71,7 @@ func (s *Server) gracefulShutdown() {
 
 	s.SetKeepAlivesEnabled(false)
 	if err := s.Shutdown(ctx); err != nil {
-		s.Logger.Fatal("cannot gracefuly shutdown the server", zap.Error(err))
+		s.Logger.Fatal("cannot gracefully shutdown the server", zap.Error(err))
 	}
 
 	s.Logger.Info("server stopped")

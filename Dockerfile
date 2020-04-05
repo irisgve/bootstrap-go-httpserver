@@ -5,5 +5,5 @@ COPY go.mod go.sum ./
 RUN go mod download
 COPY . .
 
-RUN go build -o bootstrap-go-httpserver ./cmd/socialkittly_streamer/main.go
+RUN go build -o bootstrap-go-httpserver ./cmd/bootstrap-go-httpserver/main.go
 CMD ["./bootstrap-go-httpserver"]

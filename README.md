@@ -3,7 +3,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/irisgve/bootstrap-go-httpserver)](https://goreportcard.com/report/github.com/irisgve/bootstrap-go-httpserver)
 
 # bootstrap-go-httpserver
-A minimumal bootstrap HTTP server written in [Go](https://golang.org)
+A minimal bootstrap HTTP server written in [Go](https://golang.org)
 
 ## Features
 - Follows minimal standard project layout specified in [project-layout](https://github.com/golang-standards/project-layout)
@@ -16,7 +16,7 @@ A minimumal bootstrap HTTP server written in [Go](https://golang.org)
 
 ## Requirements
 - Docker
-- Go 1.14
+- Go 1.16
 
 ## Setting up
 1. Clone this repository
